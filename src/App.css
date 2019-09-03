@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+}
+
+#main-form {
+  margin: 0 auto 20px;
+  max-width: 600px;
+}
+
+.title-box {
+  text-align: center;
+}
