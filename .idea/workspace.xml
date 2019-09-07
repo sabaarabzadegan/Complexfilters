@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb719d03-cbdd-4dc4-ae33-b8c653c1c10c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/complexfilters.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/complexfilters.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -26,11 +26,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="26" column="45" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
+            <state relative-caret-position="-622">
+              <caret line="27" column="40" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -60,38 +60,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/serviceWorker.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/complexfilters.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="67" column="44" lean-forward="true" selection-start-line="67" selection-start-column="44" selection-end-line="67" selection-end-column="44" />
+            <state relative-caret-position="414">
+              <caret line="151" column="6" selection-start-line="151" selection-start-column="6" selection-end-line="151" selection-end-column="6" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../main/src/complexfilters.js">
+        <entry file="file://$PROJECT_DIR$/src/complexfilters.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="650">
-              <caret line="242" column="69" lean-forward="true" selection-start-line="242" selection-start-column="69" selection-end-line="242" selection-end-column="69" />
-              <folding>
-                <element signature="e#530#1367#0" />
-                <element signature="e#1378#1925#0" />
-                <element signature="e#1968#2659#0" />
-                <element signature="e#2781#3188#0" />
-                <element signature="e#3256#3640#0" />
-                <element signature="e#4206#5572#0" />
-              </folding>
+            <state relative-caret-position="1049">
+              <caret line="70" selection-start-line="70" selection-end-line="70" />
             </state>
           </provider>
         </entry>
@@ -100,16 +84,19 @@
         <entry file="file://$USER_HOME$/WebstormProjects/complexfilters/js/complexfilters.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="177">
-              <caret line="281" column="8" selection-start-line="281" selection-start-column="8" selection-end-line="281" selection-end-column="8" />
+              <caret line="327" column="18" selection-start-line="327" selection-start-column="10" selection-end-line="327" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
+        <entry file="file://E:/complexfilters - MoreDetails/src/complexfilters.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+            <state relative-caret-position="245">
+              <caret line="483" column="7" lean-forward="true" selection-start-line="479" selection-start-column="4" selection-end-line="483" selection-end-column="7" />
+              <folding>
+                <element signature="e#9281#11309#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -125,26 +112,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getgrammar</find>
-      <find>groupHash</find>
-      <find>isSimilarItem</find>
-      <find>isSubStingItem</find>
-      <find>inputState</find>
-      <find>suggest</find>
-      <find>goback</find>
-      <find>onMouseDo</find>
-      <find>InputWidget</find>
-      <find>main</find>
-      <find>parameters</find>
-      <find>console.log</find>
-      <find>closetoken</find>
-      <find>makeSuggestion</find>
-      <find>inputBoxClass</find>
-      <find>main(</find>
-      <find>onMouse</find>
-      <find>onMouseDown</find>
-      <find>Boolean</find>
-      <find>inputBox</find>
       <find>isMatchItem</find>
       <find>return</find>
       <find>**</find>
@@ -154,7 +121,27 @@
       <find>goBack</find>
       <find>//</find>
       <find>suggestions</find>
+      <find>pushState(</find>
+      <find>getGrammar</find>
+      <find>key</find>
+      <find>pushState</find>
+      <find>setSta</find>
+      <find>pushSta</find>
+      <find>tokenI</find>
+      <find>tokenItems</find>
+      <find>tokenItems.push(</find>
+      <find>makeSugg</find>
+      <find>suggest</find>
+      <find>suggested</find>
       <find>suggestedItems</find>
+      <find>value</find>
+      <find>suggestedItem</find>
+      <find>keypress</find>
+      <find>inputWidgetObject</find>
+      <find>none</find>
+      <find>addClass</find>
+      <find>close</find>
+      <find>inputWidgetBlurHandler</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -166,10 +153,14 @@
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/listItem.js" />
         <option value="$PROJECT_DIR$/src/inputWidget.js" />
-        <option value="$USER_HOME$/WebstormProjects/complexfilters/index.html" />
-        <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/App.css" />
         <option value="$PROJECT_DIR$/src/index.js" />
+        <option value="E:/complexfilters - MoreDetails/src/complexfilters.js" />
+        <option value="$USER_HOME$/WebstormProjects/complexfilters/js/main.js" />
+        <option value="$USER_HOME$/WebstormProjects/complexfilters/js/complexfilters.js" />
+        <option value="$USER_HOME$/WebstormProjects/complexfilters/index.html" />
+        <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/src/complexfilters.css" />
         <option value="$PROJECT_DIR$/src/complexfilters.js" />
       </list>
     </option>
@@ -249,12 +240,12 @@
       <workItem from="1566023879515" duration="13737000" />
       <workItem from="1566113845944" duration="105413000" />
       <workItem from="1567327904103" duration="13707000" />
-      <workItem from="1567503620947" duration="4850000" />
+      <workItem from="1567503620947" duration="37324000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="229715000" />
+    <option name="totallyTimeSpent" value="262189000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -300,27 +291,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/complexfilters.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="53" column="33" lean-forward="true" selection-end-line="110" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/complexfilters - MoreDetails/src/complexfilters.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-13971">
-          <caret line="11" column="22" lean-forward="true" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/WebstormProjects/complexfilters/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="7" lean-forward="true" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -332,13 +302,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -361,17 +324,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/WebstormProjects/complexfilters/js/complexfilters.js">
+    <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="281" column="8" selection-start-line="281" selection-start-column="8" selection-end-line="281" selection-end-column="8" />
+        <state relative-caret-position="241">
+          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../main/src/complexfilters.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="242" column="69" lean-forward="true" selection-start-line="242" selection-start-column="69" selection-end-line="242" selection-end-column="69" />
+        <state relative-caret-position="17">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
           <folding>
             <element signature="e#530#1367#0" />
             <element signature="e#1378#1925#0" />
@@ -383,6 +346,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/WebstormProjects/complexfilters/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="20" column="33" lean-forward="true" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/WebstormProjects/complexfilters/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="19" lean-forward="true" selection-start-line="10" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/complexfilters - MoreDetails/src/complexfilters.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -390,20 +370,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
+    <entry file="file://$PROJECT_DIR$/src/complexfilters.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="26" column="45" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
+        <state relative-caret-position="1049">
+          <caret line="70" selection-start-line="70" selection-end-line="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/WebstormProjects/complexfilters/js/complexfilters.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="327" column="18" selection-start-line="327" selection-start-column="10" selection-end-line="327" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/complexfilters - MoreDetails/src/complexfilters.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="483" column="7" lean-forward="true" selection-start-line="479" selection-start-column="4" selection-end-line="483" selection-end-column="7" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#9281#11309#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/complexfilters.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="67" column="44" lean-forward="true" selection-start-line="67" selection-start-column="44" selection-end-line="67" selection-end-column="44" />
+        <state relative-caret-position="414">
+          <caret line="151" column="6" selection-start-line="151" selection-start-column="6" selection-end-line="151" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-622">
+          <caret line="27" column="40" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

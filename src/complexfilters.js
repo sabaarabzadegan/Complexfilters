@@ -1,9 +1,88 @@
 import React from 'react';
+import './complexfilters.css';
 
-class ComplexFilters extends React.Component{
+class ComplexFilters extends React.Component {
 
-    constructor(props){
+    constructor(props) {
         super(props);
+
+        this.state = {
+
+            //for storing filter box list(tokens)
+            tokenItems: [
+                [{
+                    field: "column",
+                    key: "text",
+                    value: "text"
+                },
+                    {
+                        field: "operator",
+                        key: "neq",
+                        value: "neq"
+                    },
+                    {
+                        field: "value",
+                        key: "value",
+                        value: "12"
+                    }],
+                [{
+                    field: "column",
+                    key: "text",
+                    value: "text"
+                },
+                    {
+                        field: "operator",
+                        key: "neq",
+                        value: "neq"
+                    },
+                    {
+                        field: "value",
+                        key: "value",
+                        value: "12"
+                    },{
+                    field: "column",
+                    key: "text",
+                    value: "text"
+                },
+                    {
+                        field: "operator",
+                        key: "neq",
+                        value: "neq"
+                    },
+                    {
+                        field: "value",
+                        key: "value",
+                        value: "12"
+                    }],
+
+            ],
+
+            showSuggestedItems: false,
+
+            //for storing suggestions list
+            suggestedItems: {
+                "_": [],
+                "columns": [
+                    {
+                        label: "Time column",
+                        value: "time"
+                    },
+                    {
+                        label: "Text column",
+                        value: "text"
+                    },
+                    {
+                        label: "Key Value Column",
+                        value: "key-value"
+                    }
+                ],
+                "abc": [
+                    {label: "a", value: "1"},
+                    {label: "b", value: "2"}
+                ]
+            },
+        };
+
         this.settings = {
             classNames: {
                 containerClass: "complexfilters-container",
@@ -26,7 +105,8 @@ class ComplexFilters extends React.Component{
             }
         };
 
-        this.setSetting();
+        //calling this function only once in whole here to set "settings" by props
+        this.setSettings();
 
     }
 
@@ -36,7 +116,7 @@ class ComplexFilters extends React.Component{
      * 2. secondly check if all grammar nodes have default style of grammar node and complete them
      * returns: changed "settings" variable
      */
-    setSetting = () =>{
+    setSettings = () => {
 
         /* main default style of grammar nodes
          * every grammar nodes should have these properties and function
@@ -63,19 +143,121 @@ class ComplexFilters extends React.Component{
          */
         for (let node in this.settings.grammar) {
             let grammarNode = this.settings.grammar[node];
-            this.settings.grammar[node] = Object.assign( {}, defaultNode, grammarNode );
+            this.settings.grammar[node] = Object.assign({}, defaultNode, grammarNode);
         }
         // now "setting.grammar" have nodes in defaultNode style
 
     };
 
+    /*
+     * handling events of inputWidget HTMLElement
+     * Parameters: event
+     * Events handle: focus, blur
+     */
+    inputWidgetEventHandler = (event) =>{
 
-    render(){
-        console.log(this.settings);
+        if (event.type === "focus") {
+
+            //Show suggestions dropdown
+            this.setState({showSuggestedItems: true});
+        } else if (event.type === "blur") {
+
+            //Hide suggestions dropdown
+            this.setState({showSuggestedItems: false});
+        }
+    };
+
+
+    // rendering "tokenItem" as HTMLElement
+    renderTokenItems = () => {
+
+        //next we can use getGrammar function
+        let grammar = this.settings.grammar;
+
+        return this.state.tokenItems.map((token, indexList) => {
+            return (
+                //should check if null or not?
+                <li key={indexList}
+                    className={this.settings.classNames.tokenItemClass}>
+                    {
+                        token.map((outValue, indexSpans) => {
+                            let outValueLabel;
+                            for (let key in grammar) {
+                                if (outValue.key === 'value')
+                                    outValueLabel = outValue.value;
+                                else if (outValue.key === key)
+                                    outValueLabel = grammar[key].label;
+                            }
+                            // if (outValueLabel !== undefined)
+                                return <span key={indexList + "." + indexSpans}> {outValueLabel} </span>;
+                        })
+                    }
+                </li>
+            )
+        })
+
+    };
+
+    // rendering "suggestedItem" as HTMLElement
+    renderSuggestedItems = () => {
+
+        let suggestedItems = [];
+        if (this.state.showSuggestedItems) {
+            for (let groupName in this.state.suggestedItems) {
+                if (groupName !== "_") {
+                    suggestedItems.push(
+                        <li key={groupName}
+                            className={this.settings.classNames.suggestedItemClass +
+                            " " + this.settings.classNames.suggestedGroupClass}
+                        >
+                            {groupName}
+                        </li>
+                    );
+                }
+                suggestedItems.push(this.state.suggestedItems[groupName].map((groupChild) => {
+                    let className = this.settings.classNames.suggestedItemClass +
+                                    " " + this.settings.classNames.suggestedNodeClass;
+
+                        if (groupName !== "_") {
+                            className += " " + this.settings.classNames.suggestedGroupItemClass;
+                        }
+
+                        return (
+                            <li key={groupName + " " + groupChild.value}
+                                // ? does need now?
+                                value={groupChild.value}
+                                className={className}
+                            >
+                                {groupChild.label}
+                            </li>
+                        )
+                    }
+                ));
+            }
+        }
+        return suggestedItems;
+    };
+
+
+    render() {
+
         return (
-            <p>
-               Complexfilters
-            </p>
+            <div className={this.settings.classNames.containerClass}>
+                <ul className={this.settings.classNames.filterBoxClass}>
+                    {this.renderTokenItems()}
+                    {/*can be written with ListItem component*/}
+                    <li className={this.settings.classNames.inputBoxClass}>
+                        {/*for storing main input widget*/}
+                        <input
+                            type="text"
+                            onFocus={this.inputWidgetEventHandler}
+                            onBlur={this.inputWidgetEventHandler} />
+                    </li>
+                </ul>
+                <ul className={this.settings.classNames.suggestionsClass}>
+                    {this.renderSuggestedItems()}
+                </ul>
+            </div>
         );
     }
 
