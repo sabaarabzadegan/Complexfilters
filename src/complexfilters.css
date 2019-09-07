@@ -1,0 +1,109 @@
+.complexfilters-container {
+    direction: ltr;
+    position: relative;
+}
+
+.complexfilters-container ul.filter-box {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: text;
+}
+
+.complexfilters-container ul {
+    margin: 0;
+    padding: 0;
+}
+
+.complexfilters-container ul li {
+    list-style: none;
+    padding: 0;
+}
+
+.complexfilters-container ul.filter-box li.input-box {
+    margin: 0;
+    padding: 0;
+    clear: left;
+}
+
+.complexfilters-container ul.filter-box li.token-item {
+    display: inline-block;
+    margin: 3px;
+    padding: 3px 5px;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    background-color: #e4e4e4;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(20%, #f4f4f4), color-stop(50%, #f0f0f0), color-stop(52%, #e8e8e8), color-stop(100%, #eeeeee));
+    background-image: -webkit-linear-gradient(#f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+    background-image: -moz-linear-gradient(#f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+    background-image: -o-linear-gradient(#f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+    background-image: linear-gradient(#f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+    color: #333;
+    cursor: default;
+}
+
+.complexfilters-container ul.filter-box li.temp-token-item {
+    display: inline-block;
+}
+
+.complexfilters-container ul.filter-box li.token-item span,
+.complexfilters-container ul.filter-box li.temp-token-item span {
+    margin: 2px;
+}
+
+.complexfilters-container ul.filter-box li.input-box input {
+    outline: 0;
+    border: 0 !important;
+    background: transparent !important;
+    box-shadow: none;
+    color: #666;
+    border-radius: 0;
+    width: 100%;
+    padding: 5px 0;
+}
+
+.complexfilters-container .suggestion-drop {
+    position: absolute;
+    z-index: 1010;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 240px;
+    border-top: 0;
+    background: #fff;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
+    border: 1px solid #ddd;
+    border-top: none;
+}
+
+.complexfilters-container .suggestion-drop li.suggested-item {
+    margin: 1px;
+    padding: 5px 1px;
+    color: #444;
+    cursor: default;
+}
+
+.complexfilters-container .suggestion-drop li.suggested-item.group-value {
+    font-weight: bold;
+    color: #000;
+    border-bottom: 1px solid #ddd;
+}
+
+.complexfilters-container .suggestion-drop li.suggested-item.node-value.group-item {
+    padding: 5px 15px;
+}
+
+.complexfilters-container .suggestion-drop li.suggested-item.node-value:hover {
+    background-color: #3875d7;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(20%, #3875d7), color-stop(90%, #2a62bc));
+    background-image: -webkit-linear-gradient(#3875d7 20%, #2a62bc 90%);
+    background-image: -moz-linear-gradient(#3875d7 20%, #2a62bc 90%);
+    background-image: -o-linear-gradient(#3875d7 20%, #2a62bc 90%);
+    background-image: linear-gradient(#3875d7 20%, #2a62bc 90%);
+    color: #fff;
+}
+
