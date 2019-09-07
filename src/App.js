@@ -42,14 +42,14 @@ class App extends React.Component {
                     widget: 'textWidget'
                 },
                 'eq': {
-                    label: '&#61;',
+                    label: '\u003D',
                     field: 'operator',
                     group: 'Operators',
                     children: ['value'],
                     widget: 'textWidget'
                 },
                 'neq': {
-                    label: '&#8800;',
+                    label: '\u2260',
                     field: 'operator',
                     group: 'Operators',
                     children: ['value'],
