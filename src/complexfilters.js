@@ -10,11 +10,12 @@ class ComplexFilters extends React.Component {
 
             //for storing filter box list(tokens)
             tokenItems: [
-                [{
-                    field: "column",
-                    key: "text",
-                    value: "text"
-                },
+                [
+                    {
+                        field: "column",
+                        key: "text",
+                        value: "text"
+                    },
                     {
                         field: "operator",
                         key: "neq",
@@ -24,36 +25,25 @@ class ComplexFilters extends React.Component {
                         field: "value",
                         key: "value",
                         value: "12"
-                    }],
-                [{
-                    field: "column",
-                    key: "text",
-                    value: "text"
-                },
+                    }
+                ],
+                [
+                    {
+                        field: "column",
+                        key: "text",
+                        value: "text"
+                    },
                     {
                         field: "operator",
-                        key: "neq",
-                        value: "neq"
+                        key: "eq",
+                        value: "eq"
                     },
                     {
                         field: "value",
                         key: "value",
                         value: "12"
-                    },{
-                    field: "column",
-                    key: "text",
-                    value: "text"
-                },
-                    {
-                        field: "operator",
-                        key: "neq",
-                        value: "neq"
-                    },
-                    {
-                        field: "value",
-                        key: "value",
-                        value: "12"
-                    }],
+                    }
+                ]
 
             ],
 
@@ -75,10 +65,6 @@ class ComplexFilters extends React.Component {
                         label: "Key Value Column",
                         value: "key-value"
                     }
-                ],
-                "abc": [
-                    {label: "a", value: "1"},
-                    {label: "b", value: "2"}
                 ]
             },
         };
@@ -154,7 +140,8 @@ class ComplexFilters extends React.Component {
      * Parameters: event
      * Events handle: focus, blur
      */
-    inputWidgetEventHandler = (event) =>{
+    inputWidgetEventHandler = (event) => {
+        event.preventDefault();
 
         if (event.type === "focus") {
 
@@ -167,6 +154,28 @@ class ComplexFilters extends React.Component {
         }
     };
 
+    /* Close token when click on it's close icon "X"
+     * token is inside of "li" widget with className "token-item"
+     * Parameters: event
+     * Events handle: click
+     */
+    closeTokenItemEventHandler = (event) => {
+        event.preventDefault();
+
+        /* get "li" widget by accessing the parent of event target
+         * and then call the remove function of HTMLElement to remove it's node from DOM
+         */
+        // event.target.parentElement.remove();
+        let tokenItems = this.state.tokenItems.slice();
+        tokenItems.splice(event.target.getAttribute("data-key"), 1);
+        // console.log(tokenItems);
+        this.setState({tokenItems: tokenItems })
+    };
+
+    suggestionsEventHandler = (event) => {
+        event.preventDefault();
+        alert("pop Up");
+    };
 
     // rendering "tokenItem" as HTMLElement
     renderTokenItems = () => {
@@ -175,23 +184,31 @@ class ComplexFilters extends React.Component {
         let grammar = this.settings.grammar;
 
         return this.state.tokenItems.map((token, indexList) => {
+            let outValues = token.map((outValue, indexSpans) => {
+                let outValueLabel;
+                for (let key in grammar) {
+                    if (outValue.key === 'value')
+                        outValueLabel = outValue.value;
+                    else if (outValue.key === key)
+                        outValueLabel = grammar[key].label;
+                }
+                // if (outValueLabel !== undefined)
+                return <span key={indexList + "." + indexSpans}>{outValueLabel}</span>;
+            });
+            outValues.push(
+                <span
+                    key={outValues.length}
+                    data-key={indexList}
+                    className={this.settings.classNames.tokenItemCloseClass}
+                    onClick={this.closeTokenItemEventHandler}
+                > X</span>
+            );
             return (
                 //should check if null or not?
                 <li key={indexList}
-                    className={this.settings.classNames.tokenItemClass}>
-                    {
-                        token.map((outValue, indexSpans) => {
-                            let outValueLabel;
-                            for (let key in grammar) {
-                                if (outValue.key === 'value')
-                                    outValueLabel = outValue.value;
-                                else if (outValue.key === key)
-                                    outValueLabel = grammar[key].label;
-                            }
-                            // if (outValueLabel !== undefined)
-                                return <span key={indexList + "." + indexSpans}> {outValueLabel} </span>;
-                        })
-                    }
+                    className={this.settings.classNames.tokenItemClass}
+                    >
+                    {outValues}
                 </li>
             )
         })
@@ -215,8 +232,8 @@ class ComplexFilters extends React.Component {
                     );
                 }
                 suggestedItems.push(this.state.suggestedItems[groupName].map((groupChild) => {
-                    let className = this.settings.classNames.suggestedItemClass +
-                                    " " + this.settings.classNames.suggestedNodeClass;
+                        let className = this.settings.classNames.suggestedItemClass +
+                            " " + this.settings.classNames.suggestedNodeClass;
 
                         if (groupName !== "_") {
                             className += " " + this.settings.classNames.suggestedGroupItemClass;
@@ -227,6 +244,7 @@ class ComplexFilters extends React.Component {
                                 // ? does need now?
                                 value={groupChild.value}
                                 className={className}
+                                onMouseDown={this.suggestionsEventHandler}
                             >
                                 {groupChild.label}
                             </li>
@@ -251,7 +269,7 @@ class ComplexFilters extends React.Component {
                         <input
                             type="text"
                             onFocus={this.inputWidgetEventHandler}
-                            onBlur={this.inputWidgetEventHandler} />
+                            onBlur={this.inputWidgetEventHandler}/>
                     </li>
                 </ul>
                 <ul className={this.settings.classNames.suggestionsClass}>
